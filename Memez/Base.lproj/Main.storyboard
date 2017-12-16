@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,63 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Memez" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="avc-yu-tUV">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ecC-6E-Pan">
+                                        <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                        <items>
+                                            <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="HB1-Ud-Xvt"/>
+                                            <barButtonItem systemItem="camera" id="elv-4C-Og3"/>
+                                            <barButtonItem style="plain" systemItem="flexibleSpace" id="1Fk-jc-5gD"/>
+                                            <barButtonItem title="Album" id="9Ki-wj-MVY"/>
+                                            <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="YRP-3C-6M5"/>
+                                        </items>
+                                    </toolbar>
+                                    <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DYu-Nc-QpS">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <items>
+                                            <navigationItem id="zFL-Tv-XDk">
+                                                <barButtonItem key="leftBarButtonItem" systemItem="action" id="A61-MK-ppp"/>
+                                                <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="SU7-g4-QV7"/>
+                                            </navigationItem>
+                                        </items>
+                                    </navigationBar>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IWH-Fa-jCR">
+                                        <rect key="frame" x="0.0" y="44" width="375" height="579"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="ecC-6E-Pan" secondAttribute="bottom" id="8cT-DN-A6B"/>
+                                    <constraint firstItem="IWH-Fa-jCR" firstAttribute="leading" secondItem="avc-yu-tUV" secondAttribute="leading" id="AHg-m5-tyr"/>
+                                    <constraint firstItem="ecC-6E-Pan" firstAttribute="leading" secondItem="avc-yu-tUV" secondAttribute="leading" id="BZS-xr-O2c"/>
+                                    <constraint firstAttribute="trailing" secondItem="IWH-Fa-jCR" secondAttribute="trailing" id="O9F-n3-ACa"/>
+                                    <constraint firstAttribute="trailing" secondItem="ecC-6E-Pan" secondAttribute="trailing" id="aUB-Qf-feK"/>
+                                    <constraint firstItem="IWH-Fa-jCR" firstAttribute="top" secondItem="avc-yu-tUV" secondAttribute="top" constant="44" id="acW-Pr-7HN"/>
+                                    <constraint firstAttribute="bottom" secondItem="IWH-Fa-jCR" secondAttribute="bottom" constant="44" id="p4c-Yj-A03"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="avc-yu-tUV" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="DGl-cJ-dLJ"/>
+                            <constraint firstAttribute="bottom" secondItem="avc-yu-tUV" secondAttribute="bottom" id="OY9-MT-H8n"/>
+                            <constraint firstItem="avc-yu-tUV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="PLf-H1-0ah"/>
+                            <constraint firstAttribute="trailing" secondItem="avc-yu-tUV" secondAttribute="trailing" id="w1Y-xU-RZY"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
     </scenes>
 </document>
