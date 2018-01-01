@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		9A4526D91FE55FB100D6F6D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4526D81FE55FB100D6F6D5 /* AppDelegate.swift */; };
-		9A4526DB1FE55FB100D6F6D5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4526DA1FE55FB100D6F6D5 /* ViewController.swift */; };
+		9A4526DB1FE55FB100D6F6D5 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4526DA1FE55FB100D6F6D5 /* EditViewController.swift */; };
 		9A4526DE1FE55FB100D6F6D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A4526DC1FE55FB100D6F6D5 /* Main.storyboard */; };
 		9A4526E01FE55FB100D6F6D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A4526DF1FE55FB100D6F6D5 /* Assets.xcassets */; };
 		9A4526E31FE55FB100D6F6D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A4526E11FE55FB100D6F6D5 /* LaunchScreen.storyboard */; };
+		9A8BA1C11FF9FC1600626A7D /* Impact.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9A8BA1C01FF9FC1600626A7D /* Impact.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9A4526D51FE55FB100D6F6D5 /* Memez.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Memez.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A4526D81FE55FB100D6F6D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9A4526DA1FE55FB100D6F6D5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9A4526DA1FE55FB100D6F6D5 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		9A4526DD1FE55FB100D6F6D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9A4526DF1FE55FB100D6F6D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9A4526E21FE55FB100D6F6D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9A4526E41FE55FB100D6F6D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A8BA1C01FF9FC1600626A7D /* Impact.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Impact.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +56,47 @@
 		9A4526D71FE55FB100D6F6D5 /* Memez */ = {
 			isa = PBXGroup;
 			children = (
-				9A4526D81FE55FB100D6F6D5 /* AppDelegate.swift */,
-				9A4526DA1FE55FB100D6F6D5 /* ViewController.swift */,
-				9A4526DC1FE55FB100D6F6D5 /* Main.storyboard */,
+				9A8BA1BC1FF9FA2300626A7D /* Controller */,
+				9A8BA1BB1FF9FA1A00626A7D /* View */,
+				9A8BA1BE1FF9FA7200626A7D /* Model */,
+				9A8BA1BF1FF9FA9C00626A7D /* Supported files */,
 				9A4526DF1FE55FB100D6F6D5 /* Assets.xcassets */,
-				9A4526E11FE55FB100D6F6D5 /* LaunchScreen.storyboard */,
-				9A4526E41FE55FB100D6F6D5 /* Info.plist */,
 			);
 			path = Memez;
+			sourceTree = "<group>";
+		};
+		9A8BA1BB1FF9FA1A00626A7D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9A4526DC1FE55FB100D6F6D5 /* Main.storyboard */,
+				9A4526E11FE55FB100D6F6D5 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9A8BA1BC1FF9FA2300626A7D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9A4526D81FE55FB100D6F6D5 /* AppDelegate.swift */,
+				9A4526DA1FE55FB100D6F6D5 /* EditViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9A8BA1BE1FF9FA7200626A7D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9A8BA1BF1FF9FA9C00626A7D /* Supported files */ = {
+			isa = PBXGroup;
+			children = (
+				9A8BA1C01FF9FC1600626A7D /* Impact.ttf */,
+				9A4526E41FE55FB100D6F6D5 /* Info.plist */,
+			);
+			path = "Supported files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,6 +158,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A8BA1C11FF9FC1600626A7D /* Impact.ttf in Resources */,
 				9A4526E31FE55FB100D6F6D5 /* LaunchScreen.storyboard in Resources */,
 				9A4526E01FE55FB100D6F6D5 /* Assets.xcassets in Resources */,
 				9A4526DE1FE55FB100D6F6D5 /* Main.storyboard in Resources */,
@@ -136,7 +172,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A4526DB1FE55FB100D6F6D5 /* ViewController.swift in Sources */,
+				9A4526DB1FE55FB100D6F6D5 /* EditViewController.swift in Sources */,
 				9A4526D91FE55FB100D6F6D5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,12 +312,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UC8UZFR7L3;
-				INFOPLIST_FILE = Memez/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Memez/Supported files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.heldesouky.Memez;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -291,12 +327,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UC8UZFR7L3;
-				INFOPLIST_FILE = Memez/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Memez/Supported files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.heldesouky.Memez;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
