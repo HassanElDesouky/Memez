@@ -9,6 +9,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Impact.ttf">
+            <string>Impact</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Edit View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -39,29 +44,53 @@
                                             <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="YRP-3C-6M5"/>
                                         </items>
                                     </toolbar>
-                                    <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DYu-Nc-QpS">
+                                    <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DYu-Nc-QpS">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                         <items>
                                             <navigationItem id="zFL-Tv-XDk">
                                                 <barButtonItem key="leftBarButtonItem" systemItem="action" id="A61-MK-ppp"/>
-                                                <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="SU7-g4-QV7"/>
+                                                <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="SU7-g4-QV7">
+                                                    <connections>
+                                                        <action selector="cancelAction:" destination="BYZ-38-t0r" id="MxP-RU-XVg"/>
+                                                    </connections>
+                                                </barButtonItem>
                                             </navigationItem>
                                         </items>
                                     </navigationBar>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IWH-Fa-jCR">
                                         <rect key="frame" x="0.0" y="44" width="375" height="579"/>
                                     </imageView>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4MT-4s-Gbj">
+                                        <rect key="frame" x="30" y="67" width="314" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GP6-hr-S8l">
+                                        <rect key="frame" x="30" y="574" width="314" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                                    </textField>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="4MT-4s-Gbj" firstAttribute="top" secondItem="avc-yu-tUV" secondAttribute="top" constant="67" id="4Wj-NQ-JBO"/>
+                                    <constraint firstItem="GP6-hr-S8l" firstAttribute="leading" secondItem="4MT-4s-Gbj" secondAttribute="leading" id="6Ua-90-91v"/>
                                     <constraint firstAttribute="bottom" secondItem="ecC-6E-Pan" secondAttribute="bottom" id="8cT-DN-A6B"/>
                                     <constraint firstItem="IWH-Fa-jCR" firstAttribute="leading" secondItem="avc-yu-tUV" secondAttribute="leading" id="AHg-m5-tyr"/>
                                     <constraint firstItem="ecC-6E-Pan" firstAttribute="leading" secondItem="avc-yu-tUV" secondAttribute="leading" id="BZS-xr-O2c"/>
+                                    <constraint firstItem="GP6-hr-S8l" firstAttribute="trailing" secondItem="4MT-4s-Gbj" secondAttribute="trailing" id="KU6-wg-O3D"/>
                                     <constraint firstAttribute="trailing" secondItem="IWH-Fa-jCR" secondAttribute="trailing" id="O9F-n3-ACa"/>
+                                    <constraint firstItem="DYu-Nc-QpS" firstAttribute="leading" secondItem="IWH-Fa-jCR" secondAttribute="leading" id="Rfa-5h-Cuv"/>
+                                    <constraint firstItem="DYu-Nc-QpS" firstAttribute="trailing" secondItem="IWH-Fa-jCR" secondAttribute="trailing" id="Yso-n8-61e"/>
                                     <constraint firstAttribute="trailing" secondItem="ecC-6E-Pan" secondAttribute="trailing" id="aUB-Qf-feK"/>
                                     <constraint firstItem="IWH-Fa-jCR" firstAttribute="top" secondItem="avc-yu-tUV" secondAttribute="top" constant="44" id="acW-Pr-7HN"/>
+                                    <constraint firstItem="GP6-hr-S8l" firstAttribute="centerX" secondItem="ecC-6E-Pan" secondAttribute="centerX" id="h9Z-S6-tX5"/>
+                                    <constraint firstItem="4MT-4s-Gbj" firstAttribute="top" secondItem="DYu-Nc-QpS" secondAttribute="bottom" constant="23" id="imA-dT-cIU"/>
+                                    <constraint firstItem="GP6-hr-S8l" firstAttribute="leading" secondItem="avc-yu-tUV" secondAttribute="leading" constant="30" id="k6Z-ws-QsV"/>
                                     <constraint firstAttribute="bottom" secondItem="IWH-Fa-jCR" secondAttribute="bottom" constant="44" id="p4c-Yj-A03"/>
+                                    <constraint firstItem="ecC-6E-Pan" firstAttribute="top" secondItem="GP6-hr-S8l" secondAttribute="bottom" constant="19" id="uXZ-S2-urZ"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -75,8 +104,15 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="albumButton" destination="9Ki-wj-MVY" id="Vf0-1f-uB0"/>
+                        <outlet property="bottomText" destination="GP6-hr-S8l" id="TYm-NS-erk"/>
+                        <outlet property="cameraButton" destination="elv-4C-Og3" id="XAh-tP-Adc"/>
                         <outlet property="cancelButton" destination="SU7-g4-QV7" id="w1X-4L-WyS"/>
+                        <outlet property="navBar" destination="DYu-Nc-QpS" id="rcc-zP-p62"/>
+                        <outlet property="photoView" destination="IWH-Fa-jCR" id="NQ6-XJ-NRt"/>
                         <outlet property="shareButton" destination="A61-MK-ppp" id="o3X-p3-1Tt"/>
+                        <outlet property="toolBar" destination="ecC-6E-Pan" id="hAu-07-Sip"/>
+                        <outlet property="topText" destination="4MT-4s-Gbj" id="hwH-VP-Aen"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
