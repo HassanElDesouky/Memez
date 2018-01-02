@@ -13,6 +13,7 @@
 		9A4526E01FE55FB100D6F6D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A4526DF1FE55FB100D6F6D5 /* Assets.xcassets */; };
 		9A4526E31FE55FB100D6F6D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A4526E11FE55FB100D6F6D5 /* LaunchScreen.storyboard */; };
 		9A8BA1C11FF9FC1600626A7D /* Impact.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9A8BA1C01FF9FC1600626A7D /* Impact.ttf */; };
+		9AFA431A1FFB61A2006AFAA0 /* Meme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFA43191FFB61A2006AFAA0 /* Meme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		9A4526E21FE55FB100D6F6D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9A4526E41FE55FB100D6F6D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A8BA1C01FF9FC1600626A7D /* Impact.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Impact.ttf; sourceTree = "<group>"; };
+		9AFA43191FFB61A2006AFAA0 /* Meme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 		9A8BA1BE1FF9FA7200626A7D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9AFA43191FFB61A2006AFAA0 /* Meme.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -172,6 +175,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AFA431A1FFB61A2006AFAA0 /* Meme.swift in Sources */,
 				9A4526DB1FE55FB100D6F6D5 /* EditViewController.swift in Sources */,
 				9A4526D91FE55FB100D6F6D5 /* AppDelegate.swift in Sources */,
 			);
